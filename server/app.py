@@ -79,10 +79,10 @@ class RestaurantPizzas(Resource):
 
 
 # Register resources
-api.add_resource(Restaurants, "/restaurants")
+api.add_resource(Restaurants, "/restaurants",  endpoint='restaurant')
 api.add_resource(RestaurantById, "/restaurants/<int:id>")
-api.add_resource(Pizzas, "/pizzas")
-api.add_resource(RestaurantPizzas, "/restaurant_pizzas")
+api.add_resource(Pizzas, "/pizzas", endpoint='pizzas')
+api.add_resource(RestaurantPizzas, "/restaurant_pizzas", endpoint='restaurant_pizza')
 
 
 if __name__ == "__main__":
